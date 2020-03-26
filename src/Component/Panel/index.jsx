@@ -1,13 +1,17 @@
 import React from 'react';
-import { Container } from './styles';
 import SearchBar from '../SearchBar';
+import SideBar from '../SideBar';
+import { Container, InnerWrapper } from './styles';
 
-const SideBar = () => {
+const Panel = () => {
   return (
     <Container>
       <SearchBar />
+      <InnerWrapper>
+        <SideBar />
+      </InnerWrapper>
     </Container>
   );
 };
 
-export default SideBar;
+export default Panel;
