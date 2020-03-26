@@ -1,8 +1,10 @@
 import React from 'react';
-import { Container } from './styles';
+import { CircleContainer, SquareContainer } from './styles';
 
+const containers = { circle: CircleContainer, square: SquareContainer };
 const Button = props => {
-  return <Container>{props.children}</Container>;
+  const Container = containers[props.type];
+  return <Container pressed={props.pressed}>{props.children}</Container>;
 };
 
 export default Button;

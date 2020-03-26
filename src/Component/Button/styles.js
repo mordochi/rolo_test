@@ -1,9 +1,21 @@
 import styled from 'styled-components';
 
-export const Container = styled.button`
+const Container = styled.button`
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: ${({ pressed }) =>
+    pressed ? 'rgba(241, 241, 241, 1)' : 'rgba(241, 241, 241, 0.08)'};
+`;
+
+export const CircleContainer = styled(Container)`
   width: 40px;
   height: 40px;
-  border: none;
   border-radius: 50%;
-  background-color: rgba(241, 241, 241, 0.08);
+`;
+
+export const SquareContainer = styled(Container)`
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
 `;
