@@ -8,7 +8,7 @@ const Panel = () => {
   return (
     <Container>
       <Input width="calc(100% - 48px)" />
-      <Button>
+      <Button type="circle">
         <Add />
       </Button>
     </Container>
