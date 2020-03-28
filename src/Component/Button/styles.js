@@ -9,8 +9,8 @@ const Container = styled.button`
 `;
 
 export const CircleContainer = styled(Container)`
-  width: 40px;
-  height: 40px;
+  width: ${({ diameter }) => (diameter ? diameter : '40px')};
+  height: ${({ diameter }) => (diameter ? diameter : '40px')};
   border-radius: 50%;
 `;
 
