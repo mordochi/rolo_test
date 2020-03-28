@@ -15,6 +15,23 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
+export const AvatarWrapper = styled.div`
+  position: relative;
+
+  :after {
+    content: '';
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(241, 241, 241, 0.1);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+`;
+
 export const Avatar = styled.img`
   width: 44px;
   height: 44px;
