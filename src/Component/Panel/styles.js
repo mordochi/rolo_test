@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  min-width: 370px;
   flex: 4 1 0;
   color: #ffffff;
   border-right: solid 1px rgba(241, 241, 241, 0.2);
