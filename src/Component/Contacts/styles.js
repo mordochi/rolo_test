@@ -7,22 +7,40 @@ export const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  overflow: scroll;
 `;
 
-export const ContactWrapper = styled.div`
+export const Wrapper = styled.div`
   text-align: center;
   margin: 0 8px;
   flex: 1 0 auto;
+  position: relative;
 
-  :first-child {
-    margin-left: 0;
+  :after {
+    content: '';
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: ${({ isDark }) => (isDark ? 'block' : 'none')};
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.72);
   }
+
+  > p {
+    opacity: ${({ isDark }) => (isDark ? '0.5' : '1')};
+  }
+`;
+
+export const List = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: scroll;
 `;
 
 export const Name = styled.p`
   margin: 6px 0 0;
-  font-family: Circular Std;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
@@ -32,4 +50,5 @@ export const Avatar = styled.img`
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  display: block;
 `;
