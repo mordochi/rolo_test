@@ -64,7 +64,7 @@ const Messages = props => {
           <Info isLastOne={i === props.messageGroups.length - 1}>
             <Wrapper>
               <Name>{group.name}</Name>
-              <Timestamp isUnread={group.message.isUnread}>
+              <Timestamp isUnread={group.message.is_unread}>
                 {group.timestamp}
               </Timestamp>
             </Wrapper>
