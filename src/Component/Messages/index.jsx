@@ -2,6 +2,7 @@ import React from 'react';
 import Phone from '../icons/Phone';
 import Reply from '../icons/Reply';
 import Voice from '../icons/Voice';
+import { connectedUsers } from '../Panel/constants';
 import {
   Avatar,
   Container,
@@ -59,7 +60,10 @@ const Messages = props => {
       }
 
       return (
-        <Message key={group.message.content}>
+        <Message
+          key={i}
+          isOnline={connectedUsers.includes(group.message.sent_by)}
+        >
           <Avatar src={group.avatar} />
           <Info isLastOne={i === props.messageGroups.length - 1}>
             <Wrapper>

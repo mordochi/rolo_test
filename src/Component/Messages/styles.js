@@ -12,7 +12,6 @@ export const Header = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-family: Circular Std;
   font-size: 20px;
   font-weight: 500;
   line-height: 25px;
@@ -29,9 +28,36 @@ export const Message = styled.div`
   justify-content: space-between;
   align-items: stretch;
   margin-top: 16px;
+  position: relative;
 
   & + & {
     margin-top: 8px;
+  }
+
+  :before {
+    content: '';
+    display: ${({ isOnline }) => (isOnline ? 'block' : 'none')};
+    width: 14px;
+    height: 14px;
+    background: #5264ef;
+    border: 2px solid #1d1d1d;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 42px;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+
+  :after {
+    content: '';
+    width: 56px;
+    height: 56px;
+    border: 1.5px solid rgba(241, 241, 241, 0.2);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
   }
 `;
 
@@ -70,14 +96,12 @@ export const Wrapper = styled.div`
 `;
 
 export const Name = styled.h4`
-  font-family: Circular Std;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
 `;
 
 export const Timestamp = styled.p`
-  font-family: Circular Std;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
@@ -85,7 +109,6 @@ export const Timestamp = styled.p`
 `;
 
 export const Content = styled.p`
-  font-family: Circular Std;
   font-size: 13px;
   font-weight: ${({ isUnread }) => (isUnread ? '500' : 'normal')};
   line-height: 16px;

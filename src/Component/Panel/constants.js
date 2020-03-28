@@ -16,7 +16,7 @@ export const starredMessageGroups = [
       type: 'text',
       content: 'How is going? Ahang.',
       is_unread: true,
-      sent_by: 'user_id'
+      sent_by: 'user_id_1'
     }
   },
   {
@@ -27,7 +27,7 @@ export const starredMessageGroups = [
       type: 'text',
       content: 'This is a new way to pay.☕️',
       is_unread: true,
-      sent_by: 'user_id'
+      sent_by: 'user_id_2'
     }
   },
   {
@@ -38,7 +38,7 @@ export const starredMessageGroups = [
       type: 'text',
       content: 'There is something wrong.',
       is_unread: false,
-      sent_by: 'user_id'
+      sent_by: 'user_id_3'
     }
   }
 ];
@@ -52,7 +52,7 @@ export const generalMessageGroups = [
       type: 'phone_call',
       status: 'Missed Call',
       is_unread: true,
-      sent_by: 'user_id'
+      sent_by: 'user_id_4'
     }
   },
   {
@@ -63,7 +63,7 @@ export const generalMessageGroups = [
       type: 'text',
       content: 'See you there, man.🙌🏿',
       is_unread: true,
-      sent_by: 'user_id'
+      sent_by: 'user_id_5'
     }
   },
   {
@@ -73,7 +73,7 @@ export const generalMessageGroups = [
     message: {
       type: 'voice',
       is_unread: true,
-      sent_by: 'user_id'
+      sent_by: 'user_id_6'
     }
   },
   {
@@ -95,7 +95,14 @@ export const generalMessageGroups = [
       type: 'text',
       content: 'Fine. You can go there.',
       is_unread: false,
-      sent_by: 'user_id'
+      sent_by: 'user_id_7'
     }
   }
+];
+
+export const connectedUsers = [
+  'user_id_1',
+  'user_id_2',
+  'user_id_5',
+  'user_id_6'
 ];
