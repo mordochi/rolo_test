@@ -6,6 +6,17 @@ const Container = styled.button`
   cursor: pointer;
   background-color: ${({ pressed }) =>
     pressed ? 'rgba(241, 241, 241, 1)' : 'rgba(241, 241, 241, 0.08)'};
+
+  :hover {
+    background-color: ${({ pressed }) =>
+      pressed ? 'rgba(241, 241, 241, 1)' : 'rgba(241, 241, 241, 0.2)'};
+    border: none;
+  }
+
+  ${({ isTransparent }) =>
+    isTransparent &&
+    `background-color: transparent;
+     border: 1px solid rgba(241, 241, 241, 0.2);`}
 `;
 
 export const CircleContainer = styled(Container)`
