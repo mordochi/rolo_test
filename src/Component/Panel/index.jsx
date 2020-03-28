@@ -1,14 +1,32 @@
 import React from 'react';
+import Contacts from '../Contacts';
+import Messages from '../Messages';
 import SearchBar from '../SearchBar';
 import SideBar from '../SideBar';
-import { Container, InnerWrapper } from './styles';
+import { generalMessageGroups, starredMessageGroups } from './constants';
+import {
+  Container,
+  InnerWrapper,
+  LeftWrapper,
+  MessagesContainer,
+  RightWrapper
+} from './styles';
 
 const Panel = () => {
   return (
     <Container>
       <SearchBar />
       <InnerWrapper>
-        <SideBar />
+        <LeftWrapper>
+          <SideBar />
+        </LeftWrapper>
+        <RightWrapper>
+          <Contacts />
+          <MessagesContainer>
+            <Messages title="Starred" messageGroups={starredMessageGroups} />
+            <Messages title="Message" messageGroups={generalMessageGroups} />
+          </MessagesContainer>
+        </RightWrapper>
       </InnerWrapper>
     </Container>
   );
