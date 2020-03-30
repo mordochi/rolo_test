@@ -29,7 +29,7 @@ const Contacts = () => {
 
   return (
     <Container>
-      <Wrapper style={{ marginLeft: '0' }}>
+      <Wrapper style={{ marginLeft: '0', flex: '0' }}>
         <Button type="circle" diameter="48px" isTransparent={true}>
           <Add />
         </Button>
