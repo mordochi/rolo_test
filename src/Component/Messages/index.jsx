@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Phone from '../icons/Phone';
 import Reply from '../icons/Reply';
 import Voice from '../icons/Voice';
@@ -20,13 +20,23 @@ import {
 } from './styles';
 
 const Messages = props => {
-  const unread = props.messageGroups.reduce(
+  const ref = useRef(null);
+  const { messageGroups, setCurrentHeight, title } = props;
+
+  useEffect(() => {
+    if (setCurrentHeight) {
+      setCurrentHeight(ref.current.offsetHeight);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [messageGroups.length]);
+
+  const unread = messageGroups.reduce(
     (acc, cur) => (cur.message.is_unread ? (acc += 1) : acc),
     0
   );
 
   const renderMessages = () => {
-    return props.messageGroups.map((group, i) => {
+    return messageGroups.map((group, i) => {
       let messageContent;
       switch (group.message.type) {
         case 'text':
@@ -64,8 +74,8 @@ const Messages = props => {
           key={i}
           isOnline={connectedUsers.includes(group.message.sent_by)}
         >
-          <Avatar src={group.avatar} />
-          <Info isLastOne={i === props.messageGroups.length - 1}>
+          <Avatar src={group.avatar} alt="avatar" />
+          <Info isLastOne={i === messageGroups.length - 1}>
             <Wrapper>
               <Name>{group.name}</Name>
               <Timestamp isUnread={group.message.is_unread}>
@@ -80,9 +90,9 @@ const Messages = props => {
   };
 
   return (
-    <Container>
+    <Container ref={ref}>
       <Header>
-        <Title>{props.title}</Title>
+        <Title>{title}</Title>
         <Note>{unread} unread messages</Note>
       </Header>
       {renderMessages()}
