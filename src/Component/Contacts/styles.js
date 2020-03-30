@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FILTER_COLOR } from '../../constants';
 
 export const Container = styled.div`
   max-width: 100%;
@@ -24,7 +25,7 @@ export const Wrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(17, 17, 17, 0.72);
+    background-color: ${FILTER_COLOR};
   }
 
   > p {

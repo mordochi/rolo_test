@@ -1,0 +1,10 @@
+export const LIGHT_GRAY = '#F1F1F1';
+export const TRANSPARENT_LIGHT_GRAY_08 = 'rgba(241, 241, 241, 0.08)';
+export const TRANSPARENT_LIGHT_GRAY_1 = 'rgba(241, 241, 241, 0.1)';
+export const TRANSPARENT_LIGHT_GRAY_2 = 'rgba(241, 241, 241, 0.2)';
+export const TRANSPARENT_LIGHT_GRAY_5 = 'rgba(241, 241, 241, 0.5)';
+export const PURPLE = '#5264EF';
+export const LIGHT_PURPLE = 'rgba(82, 100, 239, 0.1)';
+export const TRANSPARENT_BLACK = 'rgba(0, 0, 0, 0.3)';
+export const DARK = '#1D1D1D';
+export const FILTER_COLOR = 'rgba(17, 17, 17, 0.72)';

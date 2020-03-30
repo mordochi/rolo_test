@@ -1,22 +1,27 @@
 import styled from 'styled-components';
+import {
+  LIGHT_GRAY,
+  TRANSPARENT_LIGHT_GRAY_08,
+  TRANSPARENT_LIGHT_GRAY_2
+} from '../../constants';
 
 const Container = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
   background-color: ${({ pressed }) =>
-    pressed ? 'rgba(241, 241, 241, 1)' : 'rgba(241, 241, 241, 0.08)'};
+    pressed ? LIGHT_GRAY : TRANSPARENT_LIGHT_GRAY_08};
 
   :hover {
     background-color: ${({ pressed }) =>
-      pressed ? 'rgba(241, 241, 241, 1)' : 'rgba(241, 241, 241, 0.2)'};
+      pressed ? LIGHT_GRAY : TRANSPARENT_LIGHT_GRAY_2};
     border: none;
   }
 
   ${({ isTransparent }) =>
     isTransparent &&
     `background-color: transparent;
-     border: 1px solid rgba(241, 241, 241, 0.2);`}
+     border: 1px solid ${TRANSPARENT_LIGHT_GRAY_2};`}
 `;
 
 export const CircleContainer = styled(Container)`

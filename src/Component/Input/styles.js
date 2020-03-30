@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { LIGHT_GRAY, TRANSPARENT_LIGHT_GRAY_08 } from '../../constants';
 
 export const Container = styled.div`
   width: ${({ width }) => (width ? width : '100%')};
   height: 40px;
-  background-color: rgba(241, 241, 241, 0.08);
+  background-color: ${TRANSPARENT_LIGHT_GRAY_08};
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -19,6 +20,6 @@ export const Input = styled.input`
   outline: none;
   background-color: transparent;
   font-size: 15px;
-  color: #f1f1f1;
+  color: ${LIGHT_GRAY};
   padding-left: 4px;
 `;

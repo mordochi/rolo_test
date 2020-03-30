@@ -1,7 +1,8 @@
 import React from 'react';
+import { PURPLE } from '../../constants';
 
 const Voice = props => {
-  const color = props.color ? props.color : '#5264EF';
+  const color = props.color ? props.color : PURPLE;
 
   return (
     <svg

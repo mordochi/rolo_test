@@ -1,8 +1,12 @@
 import styled from 'styled-components';
+import {
+  TRANSPARENT_LIGHT_GRAY_1,
+  TRANSPARENT_LIGHT_GRAY_2
+} from '../../constants';
 
 export const Container = styled.div`
   padding: 8px 11.5px 16px 16px;
-  border-right: solid 1px rgba(241, 241, 241, 0.2);
+  border-right: solid 1px ${TRANSPARENT_LIGHT_GRAY_2};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,7 +26,7 @@ export const AvatarWrapper = styled.div`
     content: '';
     width: 44px;
     height: 44px;
-    border: 1px solid rgba(241, 241, 241, 0.1);
+    border: 1px solid ${TRANSPARENT_LIGHT_GRAY_1};
     border-radius: 50%;
     display: block;
     position: absolute;

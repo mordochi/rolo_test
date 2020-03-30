@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import {
+  DARK,
+  LIGHT_GRAY,
+  LIGHT_PURPLE,
+  TRANSPARENT_LIGHT_GRAY_1,
+  TRANSPARENT_LIGHT_GRAY_2,
+  TRANSPARENT_LIGHT_GRAY_5,
+  PURPLE
+} from '../../constants';
 
 export const Container = styled.div`
   padding: 8px 0;
@@ -39,8 +48,8 @@ export const Message = styled.div`
     display: ${({ isOnline }) => (isOnline ? 'block' : 'none')};
     width: 14px;
     height: 14px;
-    background: #5264ef;
-    border: 2px solid #1d1d1d;
+    background: ${PURPLE};
+    border: 2px solid ${DARK};
     border-radius: 50%;
     position: absolute;
     bottom: 0;
@@ -53,7 +62,7 @@ export const Message = styled.div`
     content: '';
     width: 56px;
     height: 56px;
-    border: 1.5px solid rgba(241, 241, 241, 0.2);
+    border: 1.5px solid ${TRANSPARENT_LIGHT_GRAY_2};
     border-radius: 50%;
     display: block;
     position: absolute;
@@ -74,7 +83,7 @@ export const Info = styled.div`
     content: '';
     display: ${({ isLastOne }) => (isLastOne ? 'none' : 'block')};
     width: 100%;
-    border-bottom: solid 1px rgba(241, 241, 241, 0.1);
+    border-bottom: solid 1px ${TRANSPARENT_LIGHT_GRAY_1};
     position: absolute;
     bottom: -4px;
     left: 0;
@@ -113,7 +122,7 @@ export const Content = styled.p`
   font-weight: ${({ isUnread }) => (isUnread ? '500' : 'normal')};
   line-height: 16px;
   color: ${({ isUnread }) =>
-    isUnread ? 'rgba(241,241,241,1)' : 'rgba(241,241,241,0.5)'};
+    isUnread ? LIGHT_GRAY : TRANSPARENT_LIGHT_GRAY_5};
 `;
 
 export const NoneTextContent = styled.p`
@@ -123,7 +132,7 @@ export const NoneTextContent = styled.p`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba(241, 241, 241, 0.1);
+  background-color: ${TRANSPARENT_LIGHT_GRAY_1};
   border-radius: 4px;
   padding: 2px 6px 2px 4px;
   margin-top: 2px;
@@ -134,6 +143,6 @@ export const NoneTextContent = styled.p`
 `;
 
 export const VoiceContent = styled(NoneTextContent)`
-  background-color: rgba(82, 100, 239, 0.1);
-  color: #5264ef;
+  background-color: ${LIGHT_PURPLE};
+  color: ${PURPLE};
 `;

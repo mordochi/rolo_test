@@ -68,7 +68,7 @@ const Panel = props => {
               messageGroups={props.messageList}
               setCurrentHeight={setMessagesHeight}
             />
-            {true && <Loading expanded={props.isLoading}>Loading...</Loading>}
+            <Loading expanded={props.isLoading}>Loading...</Loading>
           </MessagesContainer>
         </RightWrapper>
       </InnerWrapper>

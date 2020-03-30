@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { LIGHT_GRAY } from '../../constants';
 
 export const Container = styled.div`
   flex: 7 0 0;
-  color: #ffffff;
+  color: ${LIGHT_GRAY};
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,7 +1,8 @@
 import React from 'react';
+import { LIGHT_GRAY } from '../../constants';
 
 const Phone = props => {
-  const color = props.color ? props.color : '#f1f1f1';
+  const color = props.color ? props.color : LIGHT_GRAY;
 
   return (
     <svg

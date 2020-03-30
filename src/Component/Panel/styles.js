@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+import { TRANSPARENT_LIGHT_GRAY_2, LIGHT_GRAY } from '../../constants';
 
 export const Container = styled.div`
   max-width: 470px;
   min-width: 370px;
   flex: 4 1 0;
-  color: #ffffff;
-  border-right: solid 1px rgba(241, 241, 241, 0.2);
+  border-right: solid 1px ${TRANSPARENT_LIGHT_GRAY_2};
   overflow: hidden;
 `;
 
@@ -44,7 +44,8 @@ export const Loading = styled.div`
   bottom: -36px;
   left: 4px;
   border-radius: 8px;
-  background-color: rgba(241, 241, 241, 0.08);
+  color: ${LIGHT_GRAY};
+  background-color: ${TRANSPARENT_LIGHT_GRAY_2};
   text-align: center;
   transform: ${props =>
     props.expanded ? 'translateY(-44px)' : 'translateY(44px)'};

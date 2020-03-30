@@ -1,7 +1,8 @@
 import React from 'react';
+import { LIGHT_GRAY } from '../../constants';
 
 const Contact = props => {
-  const color = props.color ? props.color : '#F1F1F1';
+  const color = props.color ? props.color : LIGHT_GRAY;
 
   return (
     <svg
