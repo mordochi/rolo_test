@@ -38,7 +38,7 @@ export const starredMessageGroups = [
       type: 'text',
       content: 'There is something wrong.',
       is_unread: false,
-      sent_by: 'user_id_3'
+      sent_by: 'user_id_4'
     }
   }
 ];

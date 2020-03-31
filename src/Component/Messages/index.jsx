@@ -37,14 +37,13 @@ const Messages = props => {
 
   const renderMessages = () => {
     return messageGroups.map((group, i) => {
+      const idNum = +group.message.sent_by.split('user_id_')[1];
       let messageContent;
       switch (group.message.type) {
         case 'text':
           messageContent = (
             <Content isUnread={group.message.is_unread}>
-              {group.message.sent_by === 'user_id_me' && (
-                <Reply style={{ marginRight: '3.61px' }} />
-              )}
+              {idNum % 3 === 0 && <Reply style={{ marginRight: '3.61px' }} />}
               {group.message.content}
             </Content>
           );
@@ -72,7 +71,7 @@ const Messages = props => {
       return (
         <Message
           key={i}
-          isOnline={connectedUsers.includes(group.message.sent_by)}
+          isOnline={idNum === 1 || idNum === 2 || idNum % 5 === 0}
         >
           <Avatar src={group.avatar} alt="avatar" />
           <Info isLastOne={i === messageGroups.length - 1}>
