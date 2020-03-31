@@ -102,7 +102,7 @@ const workercode = () => {
     }
 
     messages.sort((a, b) => {
-      return a.timestamp.getTime() - b.timestamp.getTime();
+      return b.timestamp.getTime() - a.timestamp.getTime();
     });
 
     return messages.map(message => {
